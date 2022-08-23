@@ -1,8 +1,21 @@
+let computerSelection = 'nothing';
+
 function getComputerChoice () {
-let choices = ['Rock', 'Paper', 'Sciccors'];
+let choices = ['Rock', 'Paper', 'Scissors'];
 let random = Math.floor(Math.random() * choices.length);
-let computerChoice = choices[random]
-console.log (random, choices[random])   
+let computerSelection = choices[random];
+return computerSelection;
 }
 
-getComputerChoice();
+computerSelection = getComputerChoice();
+
+let playerSelection = prompt('Choose Rock, Paper, or Scissors');
+if (playerSelection.toUpperCase(playerSelection) == 'ROCK' ||playerSelection.toUpperCase() == 'SCISSORS' || playerSelection.toUpperCase() == 'PAPER') {
+    game(computerSelection, playerSelection);
+} else {
+    let playerSelection = parseInt(prompt('Try again! Choose Rock, Paper, or Scissors'));
+}
+
+function game() {
+    console.log('working');
+}
