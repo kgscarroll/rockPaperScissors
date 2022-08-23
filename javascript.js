@@ -27,7 +27,10 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    for(let i = 0; i < 5; i++; let x=0; let y=0;) {
+    let x=0;
+    let y=0;
+    for(let i = 0; i < 5; i++) {
+        let computerSelection = getComputerChoice().toUpperCase();
         let playerSelection = prompt('Choose Rock, Paper, or Scissors').toUpperCase();
         if ((playerSelection) == 'ROCK' ||playerSelection == 'SCISSORS' || playerSelection == 'PAPER') {
             let message = playRound(playerSelection, computerSelection);
@@ -48,3 +51,5 @@ function game() {
     }
     
 }
+
+game();
